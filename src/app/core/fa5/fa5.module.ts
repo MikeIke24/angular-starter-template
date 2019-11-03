@@ -1,0 +1,75 @@
+import {NgModule} from '@angular/core';
+import {library} from '@fortawesome/fontawesome-svg-core';
+import {
+  faAngleDoubleLeft,
+  faAngleDoubleRight,
+  faAngleDoubleUp,
+  faAngleLeft,
+  faAngleRight,
+  faBars,
+  faBed,
+  faBuilding,
+  faBusAlt,
+  faCalendarDay,
+  faCar,
+  faCaretDown,
+  faCheck,
+  faCheckCircle,
+  faChevronCircleRight,
+  faChevronDown,
+  faChevronRight,
+  faCircle,
+  faDesktop,
+  faEllipsisV,
+  faEnvelope,
+  faExclamation,
+  faExclamationCircle,
+  faExclamationTriangle,
+  faFileAlt,
+  faFilter,
+  faHome,
+  faInfo,
+  faInfoCircle,
+  faKey,
+  faLongArrowAltLeft,
+  faMapMarkerAlt,
+  faMoneyCheckAlt,
+  faPen,
+  faPhoneAlt,
+  faPlane,
+  faPlaneArrival,
+  faPlaneDeparture,
+  faPlus,
+  faPlusCircle,
+  faQuestion,
+  faQuestionCircle,
+  faSearch, faSort,
+  faSortAlphaDown,
+  faSortAlphaUp, faSortNumericDown, faSortNumericUp,
+  faTaxi,
+  faTimes,
+  faTimesCircle,
+  faTrash, faUnlock,
+  faUser,
+  faUserFriends,
+  faUsers,
+  faUserTie,
+  faUtensils
+} from '@fortawesome/free-solid-svg-icons';
+
+@NgModule({
+  declarations: [],
+  imports: []
+})
+export class Fa5Module {
+  constructor() {
+    library.add(faHome, faUser, faUsers, faSearch, faEllipsisV, faPen, faTrash, faBars,
+      faChevronRight, faTimes, faTimesCircle, faChevronDown, faCheck, faInfo, faInfoCircle,
+      faQuestionCircle, faFileAlt, faFilter, faQuestion, faCaretDown, faCheckCircle, faExclamationCircle, faExclamationTriangle,
+      faExclamation, faBuilding, faMapMarkerAlt, faUserTie, faPlaneDeparture, faPlaneArrival, faPlane, faCalendarDay,
+      faPhoneAlt, faEnvelope, faKey, faCar, faBed, faUserFriends, faLongArrowAltLeft, faDesktop, faChevronCircleRight, faPlus, faBusAlt,
+      faMoneyCheckAlt,
+      faTaxi, faUtensils, faCircle, faAngleDoubleUp, faPlusCircle, faSortAlphaDown, faAngleDoubleLeft, faAngleDoubleRight,
+      faAngleLeft, faAngleRight, faSortAlphaUp, faSortNumericUp, faSortNumericDown, faSort, faUnlock);
+  }
+}

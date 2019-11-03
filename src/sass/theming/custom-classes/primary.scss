@@ -1,0 +1,40 @@
+@import '~@angular/material/theming';
+
+@mixin primary-theme($theme) {
+
+  $primary: map-get($theme, primary);
+
+  --primary-color: #{mat-color($primary)};
+  --primary-color--lighter: #{mat-color($primary, lighter)};
+  --primary-color--darker: #{mat-color($primary, darker)};
+  --primary-color--800: #{mat-color($primary, 800)};
+  --primary-color--400: #{mat-color($primary, 400)};
+  --primary-color--100: #{mat-color($primary, 100)};
+
+  .primary {
+    color: mat-color($primary);
+  }
+
+  .primary--400 {
+    color: mat-color($primary, 400);
+  }
+
+  .primary-bg {
+    background-color: mat-color($primary);
+  }
+
+  .primary-bg--lighter {
+    background-color: mat-color($primary, lighter);
+  }
+
+  .primary-border {
+    border-color: mat-color($primary);
+  }
+
+  .primary-border--darker {
+    border-color: mat-color($primary, darker);
+  }
+}
+
+
+

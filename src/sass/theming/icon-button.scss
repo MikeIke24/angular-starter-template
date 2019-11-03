@@ -1,0 +1,127 @@
+@import '~@angular/material/theming';
+
+@mixin icon-button-theme($theme) {
+
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $success: map-get($theme, success);
+  $error: map-get($theme, error);
+  $warn: map-get($theme, warn);
+  $info: map-get($theme, info);
+  $infoDark: map-get($theme, infoDark);
+  $darkGray: map-get($theme, darkGray);
+  $lightGray: map-get($theme, lightGray);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  ui-icon-button {
+    .info {
+      .mat-button-focus-overlay {
+        background-color: rgb(13, 147, 255);
+      }
+
+      .mat-button-ripple > .mat-ripple-element {
+        background-color: #0063b9 !important;
+      }
+
+      .button-icon {
+        color: #00a5ff;
+      }
+
+
+      .mat-button-inner-wrapper {
+        .icon-button-text, .content-wrapper {
+          color: #4b7694;
+        }
+      }
+
+      .mat-button-inner-wrapper.alt {
+        .icon-button-text, .content-wrapper {
+          color: #00a5ff;
+        }
+      }
+    }
+
+    .primary {
+      .mat-button-focus-overlay {
+        background-color: mat-color($primary);
+      }
+
+      .mat-button-ripple > .mat-ripple-element {
+        background-color: mat-color($primary) !important;
+      }
+
+      .button-icon {
+        color: mat-color($primary);
+      }
+
+      .icon-button-text, .content-wrapper  {
+        color: mat-color($primary, lighter);
+      }
+    }
+
+    .accent {
+      .mat-button-focus-overlay {
+        background-color: mat-color($accent, 300);
+      }
+
+      .mat-button-ripple > .mat-ripple-element {
+        background-color: mat-color($accent, 300) !important;
+      }
+
+      .button-icon {
+        color: mat-color($accent, 500);
+      }
+
+      .mat-button-inner-wrapper {
+        .icon-button-text, .content-wrapper {
+          color: mat-color($accent, 1000);
+        }
+      }
+
+      .mat-button-inner-wrapper.alt {
+        .icon-button-text, .content-wrapper {
+          color: #8a6154;
+        }
+      }
+
+      .mat-button-inner-wrapper.dark-theme-color {
+        .icon-button-text, .content-wrapper {
+          color: #ffeee4;
+        }
+      }
+
+    }
+
+    .warn {
+      .mat-button-focus-overlay {
+        background-color: mat-color($warn, 800);
+      }
+
+      .mat-button-ripple > .mat-ripple-element {
+        background-color: mat-color($warn, 500) !important;
+      }
+
+      .button-icon {
+        color: mat-color($warn, 500);
+      }
+
+      .mat-button-inner-wrapper {
+        .icon-button-text, .content-wrapper {
+          color: #806f71;
+        }
+      }
+
+      .mat-button-inner-wrapper.alt {
+        .icon-button-text, .content-wrapper {
+          color: #dd726e;
+        }
+      }
+
+    }
+
+  }
+}
+
+
+

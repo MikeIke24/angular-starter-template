@@ -1,0 +1,25 @@
+@import '~@angular/material/theming';
+
+@mixin success-theme($theme) {
+
+  $success: map-get($theme, success);
+
+  --success-color: #{mat-color($success)};
+  --success-color--lighter: #{mat-color($success, lighter)};
+  --success-color--darker: #{mat-color($success, darker)};
+  --success-color--900: #{mat-color($success, 900)};
+  --success-color--800: #{mat-color($success, 800)};
+  --success-color--400: #{mat-color($success, 400)};
+  --success-color--100: #{mat-color($success, 100)};
+
+  .success--700 {
+    color: mat-color($success, 700);
+  }
+
+  .success--900 {
+    color: mat-color($success, 900);
+  }
+}
+
+
+

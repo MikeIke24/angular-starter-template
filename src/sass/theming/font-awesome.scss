@@ -1,0 +1,32 @@
+@import '~@angular/material/theming';
+
+@mixin font-awesome-theme($theme) {
+  $primary: map-get($theme, primary);
+  $infoDark: map-get($theme, infoDark);
+
+  fa-icon {
+    color: mat-color($primary, lighter);
+    transition: color 0.2s ease;
+  }
+
+  button:hover:not(:disabled):not(.no-hover) fa-icon {
+    color: mat-color($infoDark, 400);
+  }
+
+  fa-icon.hoverable .search-icon {
+    color: mat-color($primary, 100);
+  }
+}
+
+// --- FontAwesome 5 icon styles ---
+.mat-icon-button fa-icon {
+  font-size: 1.25em;
+}
+
+// for menu items with icons, give margin before label
+button.mat-menu-item fa-icon {
+  font-size: 1.25em;
+  margin-right: 22px;
+}
+
+// --- End FontAwesome 5 global styles ----

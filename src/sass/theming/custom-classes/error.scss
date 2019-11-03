@@ -1,0 +1,13 @@
+@import '~@angular/material/theming';
+
+@mixin error-theme($theme) {
+
+  $error: map-get($theme, error);
+
+  .error {
+    color: mat-color($error);
+  }
+}
+
+
+

@@ -1,0 +1,37 @@
+@import '~@angular/material/theming';
+
+@mixin grays-theme($theme) {
+
+  $darkGray: map-get($theme, darkGray);
+  $lightGray: map-get($theme, lightGray);
+
+  --lightGray-color: #{mat-color($lightGray)};
+  --lightGray-color--lighter: #{mat-color($lightGray, lighter)};
+  --lightGray-color--darker: #{mat-color($lightGray, darker)};
+  --lightGray-color--200: #{mat-color($lightGray, 200)};
+  --lightGray-color--400: #{mat-color($lightGray, 400)};
+  --lightGray-color--600: #{mat-color($lightGray, 600)};
+
+  --darkGray-color: #{mat-color($darkGray)};
+  --darkGray-color--lighter: #{mat-color($darkGray, lighter)};
+  --darkGray-color--darker: #{mat-color($darkGray, darker)};
+  --darkGray-color--200: #{mat-color($darkGray, 200)};
+  --darkGray-color--400: #{mat-color($darkGray, 400)};
+  --darkGray-color--600: #{mat-color($darkGray, 600)};
+  
+  
+  .gray-dark--600 {
+    color: mat-color($darkGray, 600);
+  }
+
+  .gray-dark--400 {
+    color: mat-color($darkGray, 400);
+  }
+
+  .gray-dark--200 {
+    color: mat-color($darkGray, 200);
+  }
+}
+
+
+

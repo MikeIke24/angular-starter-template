@@ -1,0 +1,82 @@
+@import '~@angular/material/theming';
+
+@mixin snackbar-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $success: map-get($theme, success);
+  $error: map-get($theme, error);
+  $warn: map-get($theme, warn);
+  $info: map-get($theme, info);
+  $infoDark: map-get($theme, infoDark);
+
+  @media only screen and (max-width: 600px) {
+    .mat-snack-bar-container {
+      max-width: 100%;
+
+      .mat-simple-snackbar {
+        flex-direction: column;
+      }
+
+      .mat-simple-snackbar-action {
+        margin: 8px 0 0 0;
+        width: 200px;
+
+        button {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .mat-snack-bar-container {
+    width: 100%;
+    max-width: 56em;
+
+    .mat-simple-snackbar {
+      span {
+        word-break: break-word;
+        white-space: pre-wrap;
+      }
+    }
+  }
+
+  .snackbar-error.mat-snack-bar-container {
+    background-color: mat-color($error);
+    color: whitesmoke;
+
+    .mat-simple-snackbar-action {
+      color: white;
+    }
+  }
+
+  .snackbar-warn.mat-snack-bar-container {
+    background-color: mat-color($warn);
+    color: whitesmoke;
+
+    .mat-simple-snackbar-action {
+      color: white;
+    }
+  }
+
+  .snackbar-info.mat-snack-bar-container {
+    background-color: mat-color($info);
+    color: whitesmoke;
+
+    .mat-simple-snackbar-action {
+      color: white;
+    }
+  }
+
+  .snackbar-success.mat-snack-bar-container {
+    background-color: mat-color($success);
+    color: whitesmoke;
+
+    .mat-simple-snackbar-action {
+      color: white;
+    }
+  }
+}
+
+.mat-snack-bar-handset {
+  width: auto !important;
+}

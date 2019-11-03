@@ -1,0 +1,19 @@
+@import '~@angular/material/theming';
+
+@mixin accent-theme($theme) {
+
+  $accent: map-get($theme, accent);
+
+  --accent-color: #{mat-color($accent)};
+  --accent-color--lighter: #{mat-color($accent, lighter)};
+  --accent-color--darker: #{mat-color($accent, darker)};
+  --accent-color--800: #{mat-color($accent, 800)};
+  --accent-color--400: #{mat-color($accent, 400)};
+  
+  .accent {
+    color: mat-color($accent);
+  }
+}
+
+
+

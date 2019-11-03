@@ -1,0 +1,114 @@
+// https://medium.com/@tomastrajan/the-complete-guide-to-angular-material-themes-4d165a9d24d1
+@import '../../../node_modules/@angular/material/theming';
+@import './custom-palettes/primary-palette';
+@import './custom-palettes/accent-palette';
+@import './custom-palettes/error-palette';
+@import './custom-palettes/warning-palette';
+@import './custom-palettes/info-palette';
+@import './custom-palettes/info-dark-palette';
+@import './custom-palettes/success-palette';
+@import './custom-palettes/dark-gray-palette';
+@import './custom-palettes/light-gray-palette';
+@import 'globals';
+@import 'font-awesome';
+// ** NOTE:  order of import matters here - 'menus' must be imported BEFORE 'mat-tooltip'
+@import 'icon-button';
+@import 'snackbar';
+@import './custom-classes/grays';
+@import './custom-classes/success';
+@import './custom-classes/info';
+@import './custom-classes/primary';
+@import './custom-classes/warning';
+@import './custom-classes/error';
+
+@include mat-core();
+
+@function cs-light-theme($primary, $accent, $error, $info, $info-dark, $success, $warning, $dark-gray, $light-gray) {
+  @return (
+          primary: $primary,
+          accent: $accent,
+          warn: $error,
+          info: $info,
+          infoDark: $info-dark,
+          success: $success,
+          error: $error,
+          warning: $warning,
+          darkGray: $dark-gray,
+          lightGray: $light-gray,
+          is-dark: false,
+          foreground: $mat-light-theme-foreground,
+          background: $mat-light-theme-background,
+  );
+}
+
+@function cs-dark-theme($primary, $accent, $error, $info, $info-dark, $success, $warning, $dark-gray, $light-gray) {
+  @return (
+          primary: $primary,
+          accent: $accent,
+          warn: $error,
+          info: $info,
+          infoDark: $info-dark,
+          success: $success,
+          error: $error,
+          warning: $warning,
+          darkGray: $dark-gray,
+          lightGray: $light-gray,
+          is-dark: false,
+          foreground: $mat-dark-theme-foreground,
+          background: $mat-dark-theme-background,
+  );
+}
+
+.cs-theme {
+  $app-primary: mat-palette($mat-cs-primary, 500, 400, 700);
+  $app-accent: mat-palette($mat-cs-accent, 500, 200, 700);
+  $app-error: mat-palette($mat-cs-error, A100);
+  $app-info: mat-palette($mat-cs-info, 700, 600, 800);
+  $app-info-dark: mat-palette($mat-cs-info-dark, 700, 600, 800);
+  $app-success: mat-palette($mat-cs-success, 700, 600, 800);
+  $app-warning: mat-palette($mat-cs-warning, 700, 600, 800);
+  $app-dark-gray: mat-palette($mat-cs-dark-gray, 500, 300, 800);
+  $app-light-gray: mat-palette($mat-cs-light-gray, 500, 300, 800);
+
+  $app-light-theme: cs-light-theme($app-primary, $app-accent, $app-error, $app-info, $app-info-dark, $app-success,
+    $app-warning, $app-dark-gray, $app-light-gray);
+
+  @include angular-material-theme($app-light-theme);
+  @include globals-theme($app-light-theme);
+  @include font-awesome-theme($app-light-theme);
+  @include icon-button-theme($app-light-theme);
+  @include snackbar-theme($app-light-theme);
+  @include grays-theme($app-light-theme);
+  @include success-theme($app-light-theme);
+  @include info-theme($app-light-theme);
+  @include primary-theme($app-light-theme);
+  @include warning-theme($app-light-theme);
+  @include error-theme($app-light-theme);
+}
+
+.cs-dark-theme {
+  $app-primary: mat-palette($mat-cs-primary, 500, 400, 700);
+  $app-accent: mat-palette($mat-cs-accent, 500, 200, 700);
+  $app-error: mat-palette($mat-cs-error, A100);
+  $app-info: mat-palette($mat-cs-info, 700, 600, 800);
+  $app-info-dark: mat-palette($mat-cs-info-dark, 700, 600, 800);
+  $app-success: mat-palette($mat-cs-success, 700, 600, 800);
+  $app-warning: mat-palette($mat-cs-warning, 700, 600, 800);
+  $app-dark-gray: mat-palette($mat-cs-dark-gray, 500, 300, 800);
+  $app-light-gray: mat-palette($mat-cs-light-gray, 500, 300, 800);
+
+  $app-dark-theme: cs-light-theme($app-primary, $app-accent, $app-error, $app-info, $app-info-dark, $app-success,
+    $app-warning, $app-dark-gray, $app-light-gray);
+
+  @include angular-material-theme($app-dark-theme);
+  @include globals-theme($app-dark-theme);
+  @include font-awesome-theme($app-dark-theme);
+  @include icon-button-theme($app-dark-theme);
+  @include snackbar-theme($app-dark-theme);
+  @include grays-theme($app-dark-theme);
+  @include success-theme($app-dark-theme);
+  @include info-theme($app-dark-theme);
+  @include primary-theme($app-dark-theme);
+  @include warning-theme($app-dark-theme);
+  @include error-theme($app-dark-theme);
+}

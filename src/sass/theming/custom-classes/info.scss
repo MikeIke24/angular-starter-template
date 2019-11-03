@@ -1,0 +1,31 @@
+@import '~@angular/material/theming';
+
+@mixin info-theme($theme) {
+
+  $info: map-get($theme, info);
+  $infoDark: map-get($theme, infoDark);
+
+  --info-color: #{mat-color($info)};
+  --info-color--lighter: #{mat-color($info, lighter)};
+  --info-color--darker: #{mat-color($info, darker)};
+  --info-color--400: #{mat-color($info, 400)};
+  --info-color--100: #{mat-color($info, 100)};
+
+  --infoDark-color: #{mat-color($infoDark)};
+  --infoDark-color--lighter: #{mat-color($infoDark, lighter)};
+  --infoDark-color--darker: #{mat-color($infoDark, darker)};
+  --infoDark-color--400: #{mat-color($infoDark, 400)};
+  --infoDark-color--100: #{mat-color($infoDark, 100)};
+
+
+  .info {
+    color: mat-color($info);
+  }
+
+  .info-dark-bg--600--hover:hover {
+    background-color: mat-color($infoDark, 600);
+  }
+}
+
+
+

@@ -1,0 +1,131 @@
+@import '~@angular/material/theming';
+
+@mixin globals-theme($theme) {
+
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $success: map-get($theme, success);
+  $error: map-get($theme, error);
+  $warn: map-get($theme, warn);
+  $info: map-get($theme, info);
+  $infoDark: map-get($theme, infoDark);
+  $darkGray: map-get($theme, darkGray);
+  $lightGray: map-get($theme, lightGray);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  .mat-tooltip, .tooltip-info {
+    background-color: mat-color($darkGray, 400);
+    color: mat-color($lightGray, 500) !important;
+    font-family: inherit;
+    font-size: 12px;
+    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.2), 0 7px 9px -5px #23262d61;
+    border-left-style: solid;
+    border-left-width: 3px;
+    border-left-color: mat-color($accent, 500);
+    padding: 4px 4px 4px 8px;
+    opacity: 1;
+    word-break: break-word;
+    white-space: pre-wrap;
+  }
+
+  // Temp global styles until they get a home
+  .mat-raised-button:not([class*='mat-elevation-z']) {
+    box-shadow: none !important;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+  }
+
+  .mat-raised-button:not([class*='mat-elevation-z']):active {
+    transform: scale(0.95);
+  }
+
+  .mat-raised-button:not([color]):not([disabled]),
+  .mat-raised-button:not([color]):not([disabled]) {
+    border: 1px solid mat-color($primary);
+    color: mat-color($primary);
+    transition: all 0.1s ease;
+    background-color: transparent;
+
+    &:hover, &:focus {
+      border: 1px solid mat-color($accent, 400);
+      background-color: mat-color($accent, 400);
+      color: white;
+    }
+  }
+
+  .mat-raised-button[color]:not([disabled]) {
+    &:hover, &:focus {
+      background-color: mat-color($infoDark, 600);
+    }
+  }
+
+  button[mat-menu-item].mat-menu-item {
+    color: mat-color($darkGray, 600);
+  }
+
+
+  e2-personal-info-ro {
+    .personal-info-container .ng-fa-icon {
+      color: mat-color($accent, 800);
+      opacity: 0.9;
+    }
+  }
+
+  .profile-add-button {
+    color: mat-color($primary);
+    padding: 4px 0;
+    margin-top: 12px;
+  }
+
+  .list-header, .mat-header-cell {
+    color: mat-color($primary);
+  }
+
+  e2-footer a {
+    color: mat-color($primary) !important;
+  }
+
+
+  // Global Styles
+
+
+  .accent {
+    color: mat-color($accent);
+  }
+
+  .accent-bg {
+    background-color: mat-color($accent);
+  }
+
+  .accent-border {
+    border-color: mat-color($accent);
+  }
+
+  .accent-border--left {
+    border-left: 2px solid mat-color($accent);
+  }
+
+  .accent-hover:hover {
+    color: mat-color($accent);
+  }
+
+  .error {
+    color: mat-color($warn) !important;
+  }
+
+  .error-bg {
+    background-color: mat-color($warn);
+  }
+
+  .error-border {
+    border-color: mat-color($warn);
+  }
+
+  .info-bg {
+    background-color: mat-color($info);
+  }
+}
+
+
+
